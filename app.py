@@ -3,7 +3,7 @@
 import subprocess
 import atexit
 from flask import render_template, render_template_string, Flask
-from bokeh.embed import autoload_server
+from bokeh.embed import server_document
 from bokeh.client import pull_session
 
 app_html="""
@@ -28,7 +28,7 @@ def kill_server():
 @app.route('/')
 def index():
     session=pull_session(app_path='/bokeh_plot')
-    bokeh_script=autoload_server(None,app_path="/bokeh_plot",session_id=session.id)
+    bokeh_script=server_document(None,app_path="/bokeh_plot",session_id=session.id)
     # return render_template('app.html', bokeh_script=bokeh_script)
     return render_template_string(app_html, bokeh_script=bokeh_script)
 
