@@ -31,7 +31,7 @@ def kill_server():
 def index():
     #session=pull_session(url='http://localhost:5006/')
     #bokeh_script=server_document(None,app_path="/bokeh_plot",session_id=session.id)
-    bokeh_script = server_document(url='https://testbokeh123.herokuapp.com/bokeh_plot', arguments=dict(batchid=batchid))
+    bokeh_script = server_document(url='https://testbokeh123.herokuapp.com/bokeh_plot')
     # return render_template('app.html', bokeh_script=bokeh_script)
     return render_template_string(app_html, bokeh_script=bokeh_script)
 
