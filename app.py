@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 # bokeh_process = subprocess.Popen(["bokeh", "serve", "--allow-websocket-origin=http://localhost:5006/", "bokeh_plot.py"],stdout=subprocess.PIPE)
 
-bokeh_process = subprocess.Popen(['python', '-m', 'bokeh', 'serve', '--port=$PORT', '--num-procs=0', '--allow-websocket-origin=https://testbokeh123.herokuapp.com/', 'bokeh_plot.py'], stdout=subprocess.PIPE)
+bokeh_process = subprocess.Popen(['python', '-m', 'bokeh', 'serve', '--allow-websocket-origin=https://testbokeh123.herokuapp.com:5008/', 'bokeh_plot.py'], stdout=subprocess.PIPE)
 
 @atexit.register
 def kill_server():
