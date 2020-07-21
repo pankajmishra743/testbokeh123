@@ -15,8 +15,8 @@ from bokeh.palettes import brewer
 
 
 sns.set_style('dark')
-fp = r'C:\Users\Lenovo\Desktop\test bokeh\map\Indian_States.shp'
-statedata = pd.read_csv(r'C:\Users\Lenovo\Desktop\test bokeh\All State.csv')
+fp = r'map\Indian_States.shp'
+statedata = pd.read_csv('All State.csv')
 map_df = gpd.read_file(fp)
 
 # This dictionary contains the formatting for the data in the plots
