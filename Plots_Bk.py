@@ -15,7 +15,7 @@ from bokeh.palettes import brewer
 
 
 sns.set_style('dark')
-fp = r'map\Indian_States.shp'
+fp = ('map/Indian_States.shp')
 statedata = pd.read_csv('All State.csv')
 map_df = gpd.read_file(fp)
 
