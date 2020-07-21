@@ -53,7 +53,8 @@ def update_plot(attr, old, new):
     p = make_plot(input_field, str(yr))
     
     # Update the layout, clear the old document and display the new document
-    layout = column(p, widgetbox(select), widgetbox(slider))
+    layout1 = column(widgetbox(select), widgetbox(slider))
+    layout = row(layout1, p)
     curdoc().clear()
     curdoc().add_root(layout)
     
